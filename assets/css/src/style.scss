@@ -1,0 +1,73 @@
+$header_background_color: #626262;
+$footer_background_color: #626262;
+$have_background_color: #9E9E9E;
+$want_background_color: #DAD9D9;
+$item_background_color: #C4C4C4;
+$item_photo_background_color: #807C7C;
+$box_shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+div.container {
+    box-shadow: $box_shadow;
+}
+
+section.header {
+    background: $header_background_color;
+    height: 120px;
+}
+
+section.main {
+    
+    div.have {
+        background: $have_background_color;
+        padding-bottom: 25px;
+        min-width: 350px;
+    }
+    div.want {
+        background: $want_background_color;
+        padding-bottom: 25px;
+        min-width: 350px;
+    }
+
+    div.items_block {
+        margin-top: 15px;
+
+        h3 {
+            margin-left: 35px;
+        }
+        div.item {
+            margin-top: 15px;
+            background: $item_background_color;
+            height: 70px;
+            margin-left: 35px;
+            margin-right: 35px;
+            
+            div.item_photo {
+                min-width: 70px;
+                max-width: 70px;
+                background: $item_photo_background_color;
+            }
+            div.item_description {
+                h4 {
+                    margin-top: 5px;
+                }
+            }
+            div.item_like {
+                h2 {
+                    margin-top: 20px;
+                }
+                min-width: 50px;
+                max-width: 50px;
+                margin-right: 10px;
+                text-align: center;
+                // background:red;
+            }
+            
+        }
+    }
+
+}
+
+section.footer {
+    background: $footer_background_color;
+    height: 120px;
+}
