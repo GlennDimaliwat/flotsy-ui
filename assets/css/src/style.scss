@@ -12,20 +12,24 @@ $shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 //     box-shadow: $shadow;
 // }
 
+* {
+    font-family: 'Raleway', sans-serif;    
+}
+
 section.header {
     background: $header_background_color;
-    height: 120px;
+    max-height: 120px;
 
     div.profile_info {
         height: 150px;
 
         div.profile_photo {
-            max-height: 110px;
-            max-width: 110px;
-            min-height: 110px;
-            min-width: 110px;
+            max-height: 100px;
+            max-width: 100px;
+            min-height: 100px;
+            min-width: 100px;
             margin-left: 50px;
-            margin-top: 5px;
+            margin-top: 10px;
             border-radius: 100%;
             background: $profile_photo_background_color;
         }
@@ -34,6 +38,7 @@ section.header {
             margin-top: 23px;
             h1 {
                 font-size: 64px;
+                font-family: 'Dancing Script', cursive;                
                 color: $snow;
                 text-shadow: $shadow;
             }
@@ -43,6 +48,7 @@ section.header {
     div.navigation {
         color: $snow;
         text-align: right;
+        margin-right: 30px;
     }
 }
 
@@ -80,7 +86,7 @@ section.main {
             }
             div.item_description {
                 h4 {
-                    margin-top: 5px;
+                    margin-top: 10px;
                 }
             }
         }
@@ -96,23 +102,37 @@ section.footer {
     height: 120px;
 }
 
-@media screen and (max-width: 950px) {
-    /* Profile name font size at 950px */
+@media screen and (max-width: 830px) {
+    /* Profile name font size */
     div.profile_name {
         h1 {
-            font-size: 36px !important;
+            font-size: 50px !important;
         }
     }
 }
 
-@media screen and (max-width: 480px) {
-    /* Profile name font size at 480px */
-    div.profile_name {
-        h1 {
-            font-size: 30px !important;
-        }
-    }
+// @media screen and (max-width: 1000px) {
+//     /* Profile name font size */
+//     div.profile_name {
+//         h1 {
+//             font-size: 36px !important;
+//         }
+//     }
+// }
+
+@media screen and (max-width: 710px) {
+    /* Hide Navigation */
     div.navigation {
         display: none;
+    }
+}
+
+@media screen and (max-width: 453px) {
+    /* Profile name font size at 460px */
+    div.profile_name {
+        h1 {
+            // margin-top: 15px;
+            font-size: 40px !important;
+        }
     }
 }
