@@ -9,9 +9,9 @@ $profile_photo_background_color: #C4C4C4;
 $snow: #F2F2F2;
 $shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-// div.container {
-//     box-shadow: $shadow;
-// }
+/*
+*   All pages
+*/
 
 * {
     font-family: 'Raleway', sans-serif;    
@@ -21,6 +21,9 @@ body {
     background: $body_bacground_color;
 }
 
+/*
+*   Show Profile Page
+*/
 section.header {
     background: $header_background_color;
     max-height: 120px;
@@ -116,15 +119,6 @@ section.footer {
     }
 }
 
-// @media screen and (max-width: 1000px) {
-//     /* Profile name font size */
-//     div.profile_name {
-//         h1 {
-//             font-size: 36px !important;
-//         }
-//     }
-// }
-
 @media screen and (max-width: 710px) {
     /* Hide Navigation */
     div.navigation {
@@ -133,11 +127,50 @@ section.footer {
 }
 
 @media screen and (max-width: 453px) {
-    /* Profile name font size at 460px */
+    /* Profile name font size */
     div.profile_name {
         h1 {
-            // margin-top: 15px;
             font-size: 40px !important;
+        }
+    }
+}
+
+
+/*
+*   Landing Page
+*/
+section.header-landing {
+    background-color: $header_background_color;
+    height: 350px;
+
+    div.app_title {
+        margin-left: auto;
+        margin-right: auto;
+
+        h1 {
+            margin-top: 150px;
+            font-size: 144px;
+            font-family: 'Dancing Script', cursive;                
+            color: $snow;
+            text-shadow: $shadow;
+        }
+    }
+}
+
+section.buttons-landing {
+    margin-top: 50px;
+
+    div.button-group-landing {
+        width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        button {
+            display: block;
+            height: 50px;
+            width: 580px;
+            font-size: 22px;
+            margin-bottom: 15px;
         }
     }
 }
