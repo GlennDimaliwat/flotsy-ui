@@ -217,3 +217,50 @@ section.main {
         }
     }
 }
+
+/*
+*   Show Item Page
+*/
+section.main {
+    div.show_item {
+        background: white;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        padding: 0;
+        box-shadow: $shadow;
+
+        div.item_image {
+            width: 550px;
+            height: 550px;
+            
+            background: $item_photo_background_color;
+        }
+
+        div.item_info {
+            width: 450px;
+            margin-top: 20px;
+            h4 {
+                font-size: 36px;
+                text-align: center;
+            }
+            p {
+                margin-left: 20px;
+                margin-right: 20px;
+                font-size: 18px;
+            }
+            div.show_item_button_group {
+                width: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 100px;
+                button {
+                    width: 200px;
+                    height: 30px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
