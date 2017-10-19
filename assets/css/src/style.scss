@@ -4,15 +4,46 @@ $have_background_color: #9E9E9E;
 $want_background_color: #DAD9D9;
 $item_background_color: #C4C4C4;
 $item_photo_background_color: #807C7C;
-$box_shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$profile_photo_background_color: #C4C4C4; 
+$snow: #F2F2F2;
+$shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-div.container {
-    box-shadow: $box_shadow;
-}
+// div.container {
+//     box-shadow: $shadow;
+// }
 
 section.header {
     background: $header_background_color;
     height: 120px;
+
+    div.profile_info {
+        height: 150px;
+
+        div.profile_photo {
+            max-height: 110px;
+            max-width: 110px;
+            min-height: 110px;
+            min-width: 110px;
+            margin-left: 50px;
+            margin-top: 5px;
+            border-radius: 100%;
+            background: $profile_photo_background_color;
+        }
+
+        div.profile_name {
+            margin-top: 23px;
+            h1 {
+                font-size: 64px;
+                color: $snow;
+                text-shadow: $shadow;
+            }
+        }
+    }
+
+    div.navigation {
+        color: $snow;
+        text-align: right;
+    }
 }
 
 section.main {
@@ -30,7 +61,7 @@ section.main {
 
     div.items_block {
         margin-top: 15px;
-
+        
         h3 {
             margin-left: 35px;
         }
@@ -40,7 +71,8 @@ section.main {
             height: 70px;
             margin-left: 35px;
             margin-right: 35px;
-            
+            box-shadow: $shadow;
+
             div.item_photo {
                 min-width: 70px;
                 max-width: 70px;
@@ -51,18 +83,10 @@ section.main {
                     margin-top: 5px;
                 }
             }
-            div.item_like {
-                h2 {
-                    margin-top: 20px;
-                }
-                min-width: 50px;
-                max-width: 50px;
-                margin-right: 10px;
-                text-align: center;
-                // background:red;
-            }
-            
         }
+    }
+    div.items_block:first-of-type {
+        margin-top: 20px;
     }
 
 }
@@ -70,4 +94,25 @@ section.main {
 section.footer {
     background: $footer_background_color;
     height: 120px;
+}
+
+@media screen and (max-width: 950px) {
+    /* Profile name font size at 950px */
+    div.profile_name {
+        h1 {
+            font-size: 36px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Profile name font size at 480px */
+    div.profile_name {
+        h1 {
+            font-size: 30px !important;
+        }
+    }
+    div.navigation {
+        display: none;
+    }
 }
