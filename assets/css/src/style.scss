@@ -1,6 +1,6 @@
 $body_bacground_color: #E5E5E5;
 $header_background_color: #626262;
-$footer_background_color: #626262;
+// $footer_background_color: #626262;
 $have_background_color: #9E9E9E;
 $want_background_color: #DAD9D9;
 $item_background_color: #C4C4C4;
@@ -26,7 +26,7 @@ body {
 */
 section.header {
     background: $header_background_color;
-    max-height: 120px;
+    height: 120px;
 
     div.profile_info {
         height: 150px;
@@ -105,10 +105,10 @@ section.main {
 
 }
 
-section.footer {
-    background: $footer_background_color;
-    height: 120px;
-}
+// section.footer {
+//     background: $footer_background_color;
+//     height: 120px;
+// }
 
 @media screen and (max-width: 830px) {
     /* Profile name font size */
@@ -137,7 +137,7 @@ section.footer {
 
 
 /*
-*   Landing Page
+*   Login Landing Page
 */
 section.header-landing {
     background-color: $header_background_color;
@@ -171,6 +171,49 @@ section.buttons-landing {
             width: 580px;
             font-size: 22px;
             margin-bottom: 15px;
+        }
+    }
+}
+
+/*
+*   Index Landing Page
+*/
+section.header {
+    div.header_title {
+        height: 150px;
+        margin-left: 35px;
+        margin-top: 15px;
+        h1 {
+            font-size: 64px;
+            font-family: 'Dancing Script', cursive;                
+            color: $snow;
+            text-shadow: $shadow;
+        }
+    }
+}
+
+section.main {
+    div.listing {
+        div.item {
+            margin-top: 15px;
+            background: $item_background_color;
+            height: 140px;
+            margin-left: 35px;
+            margin-right: 35px;
+            box-shadow: $shadow;
+
+            div.item_photo {
+                min-width: 140px;
+                max-width: 140px;
+                background: $item_photo_background_color;
+            }
+            div.item_description {
+                h4 {
+                    margin-top: 10px;
+                    font-size: 48px;
+                    font-weight: bold;
+                }
+            }
         }
     }
 }
